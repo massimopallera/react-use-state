@@ -1,3 +1,82 @@
-.hide > p{
-  display: none;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --html: #E34F26;
+  --css: #1572B6;
+  --javascript: #F7DF1E;
+  --nodejs: #339933;
+  --express: #000000;
+  --react: #61DAFB;
+}
+
+
+body{
+  background: #555;
+  color: white;
+}
+
+.container{
+  /* width: 75%; */
+  padding: 2rem;
+  /* margin: auto; */
+  height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.accordion, p{
+  border-radius: 15px;
+}
+
+.accordion{
+  padding: .5rem 1rem;
+  background: #999;
+  margin-bottom: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 2rem;
+
+  button{
+    padding: .5rem .85rem;
+    margin: 2rem 0;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: white;
+
+    &.html{
+      background: var(--html);
+    }
+    &.css{
+      background: var(--css);
+    }
+    &.javascript{
+      background: var(--javascript);
+      color: #000;
+    }
+    &.nodejs{
+      background: var(--nodejs);
+    }
+    &.express{
+      background: var(--express);
+    }
+    &.reactjs{
+      background: var(--react);
+      color: #000;
+    }
+  }
+}
+
+p{
+  background: #000;
+  padding: 1.25rem;
+  text-align: center;
 }

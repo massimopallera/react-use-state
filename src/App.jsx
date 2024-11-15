@@ -27,14 +27,16 @@ function App() {
           {lang.map((element, index) => (
             <>
               <div className={`accordion-item ${active == index ? 'active' : 'hide'}`}  key={index}>
-                <button data-index={index} onClick={handleClick}>{element.title}</button>
-                <p>{element.description}</p>
+                <button data-index={index} onClick={handleClick} className={element.slug.toLowerCase()}>{element.title}</button>
               </div>
             </>
             ))
           }
 
+
+
         </div>
+          <p>{lang[active].description}</p>
       </div>
     </>
   )
