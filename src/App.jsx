@@ -5,7 +5,18 @@ import './App.css'
 
 function App() {
   
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(-1)
+
+  let description 
+  let descClass
+  if (active == -1) {
+    description = 'Nessun linguaggio selezionato'
+    descClass = 'choose-language'
+  } else {
+    description = lang[active].description
+    descClass = lang[active].slug.toLowerCase() 
+  }
+
 
   function handleClick(e) {
     const newActive = e.target.getAttribute('data-index')
@@ -36,7 +47,7 @@ function App() {
 
 
         </div>
-          <p className={lang[active].slug.toLowerCase()} >{lang[active].description}</p>
+          <p className={descClass}>{description}</p>
       </div>
     </>
   )

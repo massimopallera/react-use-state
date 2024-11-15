@@ -120,3 +120,7 @@ button:hover{
   color: #ffffff;
   font-weight: 600;
 }
+
+.choose-language{
+  background: #999;
+}
