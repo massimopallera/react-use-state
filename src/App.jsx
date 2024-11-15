@@ -36,7 +36,7 @@ function App() {
 
 
         </div>
-          <p>{lang[active].description}</p>
+          <p className={lang[active].slug.toLowerCase()} >{lang[active].description}</p>
       </div>
     </>
   )

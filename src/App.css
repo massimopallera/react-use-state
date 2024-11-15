@@ -19,11 +19,35 @@ body{
   color: white;
 }
 
+header{
+  padding: 1rem;
+  text-align: center;
+  background: #222;
+
+  /* made with gpt */
+  h1{
+    background: linear-gradient(
+      90deg,
+      var(--html) 30%,         /* Arancione di HTML */
+      var(--javascript) 40%,   /* Giallo di JavaScript */
+      var(--css) 50%,          /* Blu di CSS */
+      var(--react) 60%,        /* Azzurro di React */
+      var(--nodejs) 70%       /* Verde di Node.js */
+      /* var(--express) 70%      Nero di Express */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+  }
+  
+}
+
 .container{
-  /* width: 75%; */
+  max-width: 800px;
+  min-width: 700px;
+  width: 80%;
   padding: 2rem;
-  /* margin: auto; */
-  height: calc(100vh - 3rem);
+  margin: 4rem auto;
+  /* height: calc(100vh - 3rem); */
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -38,7 +62,6 @@ body{
   padding: .5rem 1rem;
   background: #999;
   margin-bottom: 3rem;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,33 +73,50 @@ body{
     margin: 2rem 0;
     border: 1px solid transparent;
     border-radius: 999px;
-    color: white;
 
-    &.html{
-      background: var(--html);
-    }
-    &.css{
-      background: var(--css);
-    }
-    &.javascript{
-      background: var(--javascript);
-      color: #000;
-    }
-    &.nodejs{
-      background: var(--nodejs);
-    }
-    &.express{
-      background: var(--express);
-    }
-    &.reactjs{
-      background: var(--react);
-      color: #000;
-    }
   }
+}
+.html{
+  background: var(--html);
+ color: white;
+
+}
+.css{
+  background: var(--css);
+  color: white;
+
+}
+.javascript{
+  background: var(--javascript);
+  color: #000;
+}
+.nodejs{
+  background: var(--nodejs);
+  color: white;
+}
+.express{
+  background: var(--express);
+  color: white;
+
+}
+.reactjs{
+  background: var(--react);
+  color: #000;
 }
 
 p{
-  background: #000;
   padding: 1.25rem;
   text-align: center;
+}
+
+
+
+button:hover{
+
+  cursor: pointer;
+  scale: 1.1;
+  transition-duration: 250ms;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
 }
