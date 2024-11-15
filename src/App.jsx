@@ -7,6 +7,14 @@ function App() {
   
   const [active, setActive] = useState(0)
 
+  function handleClick(e) {
+    const newActive = e.target.getAttribute('data-index')
+    console.log(newActive);
+    
+
+    setActive(newActive)
+  }
+
 
   return (
     <>
@@ -18,8 +26,8 @@ function App() {
           
           {lang.map((element, index) => (
             <>
-              <div className="accordion-item" key={index}>
-                <button id={index}>{element.title}</button>
+              <div className={`accordion-item ${active == index ? 'active' : 'hide'}`}  key={index}>
+                <button data-index={index} onClick={handleClick}>{element.title}</button>
                 <p>{element.description}</p>
               </div>
             </>
