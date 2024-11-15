@@ -1,7 +1,13 @@
 import { useState } from 'react'
+import lang from './assets/db/languages.js'
+
 import './App.css'
 
 function App() {
+  
+  const [active, setActive] = useState(0)
+
+
   return (
     <>
       <header><h1>Learn Web Development</h1></header>
@@ -9,10 +15,16 @@ function App() {
       <div className="container">
         <div className="accordion">
 
-          <div className="accordion-item">
-            <button>HTML</button>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus, porro esse, itaque consequuntur enim ipsam animi facere quod maiores omnis fugit quos tempore, rerum dolorum iste saepe! Aperiam, qui.</p>
-          </div>
+          
+          {lang.map((element, index) => (
+            <>
+              <div className="accordion-item" key={index}>
+                <button id={index}>{element.title}</button>
+                <p>{element.description}</p>
+              </div>
+            </>
+            ))
+          }
 
         </div>
       </div>
